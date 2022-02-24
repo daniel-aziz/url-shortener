@@ -3,6 +3,10 @@ const app = express();
 
 const PORT = 3000;
 
+const Url = require('./models/url')
+
+
+
 app.listen(PORT, ()=>{
     console.log(`Server is running at port ${PORT}...`)
 })

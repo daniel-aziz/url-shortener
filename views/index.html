@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>URL Shortener Microservice</title>
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+    <script>
+        
+    </script>
+  </head>
+
+  <body>
+    <h1>URL Shortener Microservice</h1>
+    <main>
+      <section>
+        <form action="/api/shorturl/new" method="POST">
+          <fieldset>
+            <legend> URL Shortener </legend>
+            <label for="original_url">URL:</label>
+            <input id="original_url" type="text" name="original_url" placeholder="https://www.google.com/" />
+            <input type="submit" value="Shorten URL" onclick="" />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p><a href="https://github.com/daniel-aziz/url-shortener">GitHub Code</a></p>
+    </footer>
+  </body>
+</html>

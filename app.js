@@ -7,8 +7,7 @@ const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 const Url = require('./models/url');
-const { json } = require('body-parser');
-const { response } = require('express');
+
 
 
 // Middleware
@@ -16,9 +15,15 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+// Export views
+app.use('/public', express.static(`${process.cwd()}/public`));
+app.get("/", (req, res) => {
+    res.sendFile(process.cwd()  + '/views/index.html');
+});
+
 
 // API's
-app.get("/", (req, res) => {
+app.get("/api/hello", (req, res) => {
     res.json({ message: "Hello World!" });
 });
 

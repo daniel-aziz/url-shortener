@@ -21,4 +21,3 @@ const urlSchema = new mongoose.Schema({
 /* exported url model & excuted autoincrament for url schema */ 
 urlSchema.plugin(autoIncrement.plugin, { model: 'Url', field: 'short_url' });
 module.exports = connection.model('Url', urlSchema)
-

@@ -1,13 +1,15 @@
 const mongoose = require('mongoose')
 autoIncrement = require('mongoose-auto-increment');
 
+const URI = "mongodb+srv://yomama:JPgGSXEsOKjzCdJE@cluster0.6bckt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 /* Database Connection */
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log("Connected to DB")
 });
 
 /* Connection instance */ 
-let connection = mongoose.createConnection(process.env.MONGO_URI)
+let connection = mongoose.createConnection(URI)
 
 /* Initialize autoincrament with connection */ 
 autoIncrement.initialize(connection);

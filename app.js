@@ -60,7 +60,8 @@ app.get('/api/shorturl/:input', (req, res) => {
 
 
 // Server init 
-app.listen(process.env.SERVER_PORT, () => {
-    console.log(`Server is running at port ${process.env.SERVER_PORT}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running at port ${PORT}`);
 });
 
